@@ -51,13 +51,13 @@ public class Main {
                     "кататься без сопровождения взрослых");
         }
         //Задача №6
-        int IsThereRoomOrNot = 44;
-        int MaximumCapacity = 102;
-        int CanYouSit = 60;
-        int YouCanStand = MaximumCapacity - CanYouSit;
-        if (IsThereRoomOrNot < MaximumCapacity && IsThereRoomOrNot > CanYouSit) {
+        int isThereRoomOrNot = 44;
+        int maximumCapacity = 102;
+        int canYouSit = 60;
+        int youCanStand = maximumCapacity - canYouSit;
+        if (isThereRoomOrNot < maximumCapacity && isThereRoomOrNot > canYouSit) {
             System.out.println("В вагоне есть места только стоя ");
-        } else if (IsThereRoomOrNot < CanYouSit) {
+        } else if (isThereRoomOrNot < canYouSit) {
             System.out.println("В вагоне есть места сидя");
         } else {
             System.out.println("Мест в автобусе нет");
