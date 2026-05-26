@@ -24,7 +24,7 @@ public class Main {
             System.out.println("Если скорость " + speed + ", то можно ездить спокойно");
         }
         //Задача №4
-        int ageThreshold = 5;
+        int ageThreshold = 25;
         if (ageThreshold >= 2 && ageThreshold <= 6) {
             System.out.println("Если ребёнку " + ageThreshold + ",то ему нужно ходить в детский сад ");
         }
@@ -37,26 +37,28 @@ public class Main {
 
 
         }
+        if (ageThreshold > 24) {
+            System.out.println("Если человеку " + ageThreshold + " ,то он должнен ходить на работу");
+        }
+
         //Задача №5
-        int attractionAge = 7;
-        boolean correctAge = attractionAge >= 5 && attractionAge <= 14;
-        if (correctAge) {
-            System.out.println("Если возраст ребенка " + attractionAge + ",то можно кататься " + "на аттракционе в сопровождении взрослых ");
-        }
+        int attractionAge = 14;
         if (attractionAge < 5) {
-            System.out.println("Если возраст ребенка " + attractionAge + ",то нельзя ка" + "таться на аттракционе");
-        }
-        if (attractionAge > 14) {
-            System.out.println("Если возраст человека " + attractionAge + ",то можно " +
-                    "кататься без сопровождения взрослых");
+            System.out.println("Если возраст ребёнка " + attractionAge + ", то нельзя кататься на аттракционе");
+        } else if (attractionAge >= 5 && attractionAge <=14) {
+            System.out.println("Если возраст ребёнка " + attractionAge + ", то можно кататься на аттракционе в сопровождении взрослых");
+        } else {
+            System.out.println("Если возраст человека " + attractionAge + ", то можно кататься без сопровождения взрослых");
         }
         //Задача №6
-        int isThereRoomOrNot = 44;
+        int isThereRoomOrNot = 100;
         int maximumCapacity = 102;
         int canYouSit = 60;
-        int youCanStand = maximumCapacity - canYouSit;
-        if (isThereRoomOrNot < maximumCapacity && isThereRoomOrNot > canYouSit) {
-            System.out.println("В вагоне есть места только стоя ");
+        int occupiedSeats = Math.min(isThereRoomOrNot, canYouSit);
+        int availableStanding = maximumCapacity - isThereRoomOrNot;
+
+        if (isThereRoomOrNot >= canYouSit && availableStanding > 0) {
+            System.out.println("Мест сидя нет, но есть места стоя");
         } else if (isThereRoomOrNot < canYouSit) {
             System.out.println("В вагоне есть места сидя");
         } else {
@@ -73,6 +75,7 @@ public class Main {
         } else if (three >= one && three >= two) {
             System.out.println("Наибольшее число:" + three);
         }
+
 
 
     }
